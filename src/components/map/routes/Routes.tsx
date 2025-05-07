@@ -27,6 +27,7 @@ const Routes = (props: RoutesProps) => {
             <section className="routes">
                 <Button variant="contained" color="darkGray" size="small" onClick={toggleDrawer(true)}>Routes</Button>
                 <SwipeableDrawer open={openDrawer} onOpen={toggleDrawer(true)} onClose={toggleDrawer(false)}>
+                    <p>Please note: Data updates every 10 seconds, please wait a bit if nothing shows up.</p>
                     <RouteData data={data} setLocalData={props.setLocalData} />
                 </SwipeableDrawer>
             </section>

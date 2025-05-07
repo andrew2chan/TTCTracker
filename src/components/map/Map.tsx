@@ -3,18 +3,21 @@ import { useInitialFetch } from "../../hooks/useInitialFetch";
 import Routes from "./routes/Routes";
 import { RoutesType } from "../../types/RoutesType";
 import { useEffect, useState } from "react";
+import { useContinuousFetch } from "../../hooks/useContinuousFetch";
 
 const Maps = () => {
     const data: RoutesType | null = useInitialFetch("https://retro.umoiq.com/service/publicXMLFeed?command=routeList&a=ttc");
     const [localData, setLocalData] = useState<RoutesType | null>(null);
+    useContinuousFetch(localData);
 
+    // sets localData to the initial data fetched from the API
     useEffect(() => {
         if (data) {
             setLocalData(data);
         } else {
             console.log("No data fetched yet.");
         }
-    });
+    }, [data]);
 
     return (
         <>
