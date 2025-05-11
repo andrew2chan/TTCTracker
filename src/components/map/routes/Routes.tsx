@@ -10,6 +10,9 @@ export type RoutesProps ={
     setLocalData: React.Dispatch<React.SetStateAction<RoutesType | null>>;
 }
 
+/**
+ * This component is use to handle the routes button interaction and the swipeable drawer itself
+ */
 const Routes = (props: RoutesProps) => {
     const [data, setData] = useState<RoutesType | null>(null);
     const [openDrawer, setOpenDrawer] = useState<boolean>(false);

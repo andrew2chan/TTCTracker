@@ -4,6 +4,9 @@ import { RoutesType } from "../../../types/RoutesType";
 
 import "./RouteData.css";
 
+/**
+ * This component is used to display the list of routes available in the swipeable drawer
+ */
 const RouteData = (props: RoutesProps) => {
     const { data, setLocalData } = props;
 
@@ -19,7 +22,7 @@ const RouteData = (props: RoutesProps) => {
                     updatedData[tag].active = checked;
                 }
             }
-            console.log(updatedData);
+            //console.log(updatedData);
             return updatedData;
         })
     }
