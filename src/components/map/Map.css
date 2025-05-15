@@ -1,0 +1,32 @@
+:root {
+  --bgColor: #474747;
+  --textColor: #ffffff;
+}
+
+.vehicle-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.direction-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  border-radius: 15%;
+  box-sizing: border-box;
+}
+
+.vehicle-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.leaflet-div-icon {
+  background: none;
+  border: none;
+}
